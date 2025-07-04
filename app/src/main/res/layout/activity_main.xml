@@ -26,8 +26,6 @@
             android:contentDescription="Menu"
             android:padding="10dp"
             />
-
-
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
