@@ -42,6 +42,17 @@
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:text="button"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:backgroundTint="@color/GreenSheen"/>
             </LinearLayout>
 
     </ScrollView>
