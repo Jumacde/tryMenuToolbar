@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text);
         setUpButton(R.id.button);
+        setUpClearButton(R.id.buttonClear);
 
     }
 
@@ -35,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 textDisplay.callShowText();
             }
         });
+    }
 
+    private void setUpClearButton(int id) {
+        Button clearButton = findViewById(id);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textDisplay.callClearDisplay();
+                textDisplay.setText("");
+            }
+        });
     }
 }
