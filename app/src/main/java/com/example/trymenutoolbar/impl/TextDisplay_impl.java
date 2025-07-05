@@ -26,7 +26,7 @@ public class TextDisplay_impl implements TextDisplay {
     }
 
     private void showText(){
-
+        setText("Hello");
     }
 
 
