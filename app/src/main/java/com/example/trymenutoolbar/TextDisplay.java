@@ -5,4 +5,5 @@ public interface TextDisplay {
     void setText(String text);
 
     void callShowText();
+    void callClearDisplay();
 }

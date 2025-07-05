@@ -16,7 +16,7 @@ public class TextDisplay_impl implements TextDisplay {
 
     @Override
     public void setText(String text) {
-        this.text = text;
+        clearDisplay();
     }
 
     // wrap method
@@ -25,9 +25,17 @@ public class TextDisplay_impl implements TextDisplay {
         showText();
     }
 
+    @Override
+    public void callClearDisplay() {
+        clearDisplay();
+    }
+
     private void showText(){
         setText("Hello");
     }
 
+    private void clearDisplay() {
+        this.setText("");
+    }
 
 }
