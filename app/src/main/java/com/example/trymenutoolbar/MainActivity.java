@@ -1,18 +1,27 @@
 package com.example.trymenutoolbar;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.trymenutoolbar.impl.TextDisplay_impl;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private TextDisplay textDisplay;
+    private Toolbar toolbar;
+    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,29 +31,58 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text);
 
-        textDisplay = new TextDisplay_impl(textView);
+        textDisplay = new TextDisplay_impl();
+        String text = textDisplay.getText();
 
         setUpButton(R.id.button);
         setUpClearButton(R.id.buttonClear);
+        textView.setText(text);
+        setUpToolbar();
     }
 
     private void setUpButton(int id) {
         Button button = findViewById(id);
+        String text = textDisplay.getText();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textDisplay.callShowText();
+                textView.setText(text);
             }
         });
     }
 
     private void setUpClearButton(int id) {
         Button clearButton = findViewById(id);
+        String text = textDisplay.getText();
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textDisplay.callClearDisplay();
+                textView.setText(text);
             }
         });
     }
+
+    @SuppressLint("WrongViewCast")
+    private void setUpToolbar() {
+        toolbar = findViewById(R.id.toolbarmain);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+        imageButton = findViewById(R.id.menuButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+                Toast.makeText(MainActivity.this, "to the next page", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+
 }

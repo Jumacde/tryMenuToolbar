@@ -6,21 +6,19 @@ import com.example.trymenutoolbar.TextDisplay;
 
 public class TextDisplay_impl implements TextDisplay {
     private String text;
-    private TextView textView;
 
-    public TextDisplay_impl(TextView textView) {
-        this.textView = textView;
+    public TextDisplay_impl() {
         clearDisplay();
     }
 
     @Override
     public String getText() {
-        return textView.getText().toString();
+        return getText();
     }
 
     @Override
     public void setText(String text) {
-        textView.setText(text);
+        this.text = text;
     }
 
     // wrap method
@@ -35,12 +33,11 @@ public class TextDisplay_impl implements TextDisplay {
     }
 
     private void showText(){
-
         setText("Hello");
     }
 
     private void clearDisplay() {
-        this.textView.setText("");
+        setText("");
     }
 
 }
