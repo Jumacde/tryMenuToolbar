@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        textView = findViewById(R.id.text);
+
         textDisplay = new TextDisplay_impl(textView);
 
-        textView = findViewById(R.id.text);
         setUpButton(R.id.button);
         setUpClearButton(R.id.buttonClear);
-
     }
 
     private void setUpButton(int id) {
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 textDisplay.callClearDisplay();
-                textDisplay.setText("");
             }
         });
     }
