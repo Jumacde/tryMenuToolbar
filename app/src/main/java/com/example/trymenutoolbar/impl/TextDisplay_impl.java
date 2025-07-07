@@ -15,12 +15,12 @@ public class TextDisplay_impl implements TextDisplay {
 
     @Override
     public String getText() {
-        return text;
+        return textView.getText().toString();
     }
 
     @Override
     public void setText(String text) {
-        clearDisplay();
+        textView.setText(text);
     }
 
     // wrap method
@@ -35,11 +35,12 @@ public class TextDisplay_impl implements TextDisplay {
     }
 
     private void showText(){
+
         setText("Hello");
     }
 
     private void clearDisplay() {
-        this.setText("");
+        this.textView.setText("");
     }
 
 }
