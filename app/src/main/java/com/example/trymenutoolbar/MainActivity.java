@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        textDisplay = new TextDisplay_impl();
+        textDisplay = new TextDisplay_impl(textView);
 
         textView = findViewById(R.id.text);
         setUpButton(R.id.button);

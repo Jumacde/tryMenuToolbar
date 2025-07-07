@@ -1,12 +1,16 @@
 package com.example.trymenutoolbar.impl;
 
+import android.widget.TextView;
+
 import com.example.trymenutoolbar.TextDisplay;
 
 public class TextDisplay_impl implements TextDisplay {
     private String text;
+    private TextView textView;
 
-    public TextDisplay_impl() {
-        this.text = "";
+    public TextDisplay_impl(TextView textView) {
+        this.textView = textView;
+        clearDisplay();
     }
 
     @Override
