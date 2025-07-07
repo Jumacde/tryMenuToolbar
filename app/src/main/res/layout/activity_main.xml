@@ -43,47 +43,40 @@
             android:layout_marginRight="50dp"
             android:layout_marginBottom="50dp"
             >
-            <LinearLayout
+            <TextView
+                android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_margin="10dp"/>
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/BrightGray"
-                    android:text="Hi"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    />
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="80dp"
-                    android:layout_marginTop="40dp"
-                    android:gravity="center"
-                    android:text="button"
-                    android:textColor="@color/white"
-                    android:textSize="30dp"
-                    android:backgroundTint="@color/GreenSheen"/>
-                <Button
-                    android:id="@+id/buttonClear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="clear"
-                    android:layout_marginLeft="85dp"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="30dp"
-                    android:backgroundTint="@color/RipeMango"
-                    />
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:background="@color/BrightGray"
+                android:text="Hi"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="button"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:backgroundTint="@color/GreenSheen"/>
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="clear"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:backgroundTint="@color/RipeMango"
+                />
             </LinearLayout>
-
     </ScrollView>
 </LinearLayout>
