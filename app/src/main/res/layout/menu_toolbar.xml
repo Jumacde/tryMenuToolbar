@@ -21,17 +21,30 @@
             android:layout_marginBottom="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@color/DutchWhite"
-            >
+            android:background="@color/CambridgeBlue"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Moin"
                 android:gravity="center_horizontal"
-                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center|top"
+                android:background="@color/DutchWhite"
                 android:textColor="@color/YankeesBlue"
                 android:textSize="50dp"/>
 
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:text="back"
+                android:textColor="@color/Shandy"
+                android:textSize="40dp"
+                android:backgroundTint="@color/DarkCyan"/>
         </LinearLayout>
 
     </ScrollView>
