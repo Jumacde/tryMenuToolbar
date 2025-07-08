@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 textDisplay.callShowText();
                 textView.setText(textDisplay.getText());
-                textView.setText(textDisplay.getText());
             }
         });
     }
