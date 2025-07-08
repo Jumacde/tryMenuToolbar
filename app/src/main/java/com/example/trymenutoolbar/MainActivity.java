@@ -40,31 +40,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpButton(int id) {
         Button button = findViewById(id);
-        String text = textDisplay.getText();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textDisplay.callShowText();
-                textView.setText(text);
+                textView.setText(textDisplay.getText());
+                textView.setText(textDisplay.getText());
             }
         });
     }
 
     private void setUpClearButton(int id) {
         Button clearButton = findViewById(id);
-        String text = textDisplay.getText();
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textDisplay.callClearDisplay();
-                textView.setText(text);
+                textView.setText(textDisplay.getText());
             }
         });
     }
 
-    @SuppressLint("WrongViewCast")
     private void setUpToolbar() {
-        toolbar = findViewById(R.id.toolbarmain);
+        toolbar = findViewById(R.id.toolbarId);
         setSupportActionBar(toolbar);
 
         if(getSupportActionBar() != null) {
