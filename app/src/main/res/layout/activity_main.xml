@@ -13,18 +13,19 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarId"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="100dp"
         android:background="@color/GreenSheen"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:elevation="4dp">
         <ImageButton
             android:id="@+id/menuButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="end"
             android:src="@drawable/ic_menu_icon"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Menu"
+            android:layout_marginTop="50dp"
             android:padding="10dp"
             />
     </androidx.appcompat.widget.Toolbar>
