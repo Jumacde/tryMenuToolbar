@@ -13,7 +13,7 @@ public class TextDisplay_impl implements TextDisplay {
 
     @Override
     public String getText() {
-        return getText();
+        return text;
     }
 
     @Override
